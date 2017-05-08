@@ -1,0 +1,38 @@
+<h1>This is user form</h1>
+<form method="post" action="{{#if noteSingleData}}{{base_url}}/users/update/{{noteSingleData._id}}{{else}}/users/userInsert{{/if}}">
+
+    Name:<input type="text" value="{{noteSingleData.name}}" required name="name"><br>
+    Email:<input type="text" value="{{noteSingleData.email}}" required name="email"><br>
+    Address:<input type="text" value="{{noteSingleData.address}}" required name="address"><br>
+
+    <input type="submit" value="{{#if noteSingleData}}Update {{else}}Save{{/if}}">
+
+</form>
+<h1>All Data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Names</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ email }}</td>
+                <td>{{ address }}</td>
+                <td><a href="{{base_url}}/users/edit/{{_id}}">Edit</a></a>
+
+                </td>
+                <td>
+                    <a onclick="if(confirm('are you sure??')){return true;}else{return false;}" href="{{base_url}}/users/delete/{{_id}}">Delete</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+

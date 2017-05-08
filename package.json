@@ -1,0 +1,16 @@
+{
+  "name": "passport",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "Passport test",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "mongodb": "^2.2.26",
+    "mongoose":"*"
+  },
+  "author": "Freemig"
+}
