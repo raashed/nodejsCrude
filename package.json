@@ -9,7 +9,7 @@
     "express": "*",
     "express-handlebars": "*",
     "express-messages": "*",
-    "mongodb": "^2.2.26",
+    "mongodb": "^7.3.0",
     "mongoose":"*"
   },
   "author": "Freemig"
